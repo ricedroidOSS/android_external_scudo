@@ -161,7 +161,9 @@ cc_library_static {
 
 cc_test {
     name: "scudo_unit_tests",
-    host_supported: true,
+    // Temporarily disabled on host due to a 15-20s per-test timeout,
+    // which is currently exceeded by ScudoCombinedTest.BasicCombined.
+    host_supported: false,
     srcs: [
         "standalone/tests/atomic_test.cpp",
         "standalone/tests/bytemap_test.cpp",
