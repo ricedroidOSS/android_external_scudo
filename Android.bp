@@ -135,6 +135,9 @@ cc_defaults {
         linux_bionic: {
             header_libs: ["bionic_libc_platform_headers"],
         },
+        native_bridge: {
+            cflags: ["-DSCUDO_DISABLE_TBI"],
+        },
     },
 
     header_libs: ["libc_headers"],
