@@ -111,8 +111,6 @@ cc_defaults {
         "external/scudo/standalone/include",
     ],
 
-    system_shared_libs: [],
-
     srcs: [
         "standalone/checksum.cpp",
         "standalone/common.cpp",
@@ -144,21 +142,20 @@ cc_defaults {
     },
 
     target: {
+        bionic: {
+            system_shared_libs: [],
+            header_libs: [
+                "libc_headers",
+                "bionic_libc_platform_headers",
+            ],
+        },
         linux_glibc: {
             enabled: true,
-        },
-        android: {
-            header_libs: ["bionic_libc_platform_headers"],
-        },
-        linux_bionic: {
-            header_libs: ["bionic_libc_platform_headers"],
         },
         native_bridge: {
             cflags: ["-DSCUDO_DISABLE_TBI"],
         },
     },
-
-    header_libs: ["libc_headers"],
 }
 
 cc_library_static {
