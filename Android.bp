@@ -149,9 +149,6 @@ cc_defaults {
                 "bionic_libc_platform_headers",
             ],
         },
-        linux_glibc: {
-            enabled: true,
-        },
         native_bridge: {
             cflags: ["-DSCUDO_DISABLE_TBI"],
         },
@@ -214,10 +211,7 @@ cc_test {
         "-fno-emulated-tls",
     ],
     target: {
-        android: {
-            header_libs: ["bionic_libc_platform_headers"],
-        },
-        linux_bionic: {
+        bionic: {
             header_libs: ["bionic_libc_platform_headers"],
         },
     },
