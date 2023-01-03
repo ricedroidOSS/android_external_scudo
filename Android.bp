@@ -119,6 +119,7 @@ cc_defaults {
         "standalone/linux.cpp",
         "standalone/release.cpp",
         "standalone/report.cpp",
+        "standalone/rss_limit_checker.cpp",
         "standalone/string_utils.cpp",
         "standalone/wrappers_c_bionic.cpp"
     ],
