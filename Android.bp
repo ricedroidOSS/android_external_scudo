@@ -90,6 +90,7 @@ cc_defaults {
 
         "-Werror=pointer-to-int-cast",
         "-Werror=int-to-pointer-cast",
+        "-Werror=thread-safety",
         "-Werror=type-limits",
         "-Werror",
 
