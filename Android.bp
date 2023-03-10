@@ -133,11 +133,6 @@ cc_defaults {
             cflags: ["-mcrc"],
             srcs: ["standalone/crc32_hw.cpp"],
         },
-        riscv64: {
-            // This is a temporary fix, and should be reverted after
-            // yieldProcessor supports riscv.
-            cflags: ["-Wno-unused-parameter"],
-        },
         x86_64: {
             cflags: ["-msse4.2"],
             srcs: ["standalone/crc32_hw.cpp"],
